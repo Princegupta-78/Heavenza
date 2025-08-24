@@ -65,10 +65,13 @@ const sessionOptions = {
     },
 };
 
-// app.get("/", (req,res)=>{
-//     res.send("Hi, I am root");
-// });
-
+app.get("/", (req, res, next) => {
+    try {
+        res.redirect("/listings");
+    } catch (err) {
+        next(new ExpressError(500, "Failed to redirect to /listings"));
+    }
+});
 
 
 app.use(session(sessionOptions));
