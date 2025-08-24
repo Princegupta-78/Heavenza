@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg px-3">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="/listings">
+      <i class="fa-solid fa-cloud-moon"></i>
+      <span>Heavenza</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navContent">
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/listings"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/new"><i class="fa-solid fa-plus"></i> New</a>
+        </li>
+      </ul>
+
+      <!-- Search form -->
+      <form class="d-flex align-items-center gap-2" role="search" action="/search" method="GET">
+        <input class="form-control search-input" type="search" name="q" placeholder="Search by name..." aria-label="Search">
+        <button class="btn btn-primary search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+      <!-- Right side -->
+      <ul class="navbar-nav ms-3">
+        <% if(!currUser){ %>
+          <li class="nav-item"><a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/signup"><i class="fa-solid fa-user-plus"></i> Signup</a></li>
+        <% } else { %>
+          <li class="nav-item"><a class="nav-link" href="/listings"><i class="fa-solid fa-layer-group"></i> Listings</a></li>
+          <li class="nav-item"><a class="nav-link" href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        <% } %>
+
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="currencyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            💱 Currency
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="currencyDropdown">
+            <select id="currencySwitcher" class="form-select-sm">
+              <option value="INR">₹ INR</option>
+              <option value="USD">$ USD</option>
+              <option value="EUR">€ EUR</option>
+            </select>            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

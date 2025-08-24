@@ -1,0 +1,25 @@
+
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  background-color: #1f1f1f !important;
+}
+.navbar a, .navbar-brand {
+  color: #f0f0f0 !important;
+}
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #f0f0f0;
+  padding: 10px;
+}
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+.search-bar {
+  width: 300px;
+}

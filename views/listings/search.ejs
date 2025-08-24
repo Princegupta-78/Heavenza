@@ -1,0 +1,26 @@
+
+<% layout("/layouts/boilerplate") %>
+<section class="py-4">
+  <h2 class="mb-3">Search results for "<%= q %>"</h2>
+  <% if(results.length === 0){ %>
+    <p class="text-muted">No listings matched. Try a different name.</p>
+  <% } else { %>
+    <div class="grid">
+      <% results.forEach((listing)=>{ %>
+        <div class="card">
+          <a href="/listings/<%= listing._id %>">
+            <img class="card-img-top" src="<%= listing.image && listing.image.url ? listing.image.url.replace('upload/','upload/w_600,q_70/') : 'https://picsum.photos/600/400' %>" alt="<%= listing.title %>" />
+            <div class="card-body">
+              <h5 class="card-title mb-1"><%= listing.title %></h5>
+              <p class="card-text text-muted mb-2"><i class="fa-solid fa-location-dot"></i> <%= listing.location %>, <%= listing.country %></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge">₹ <%= listing.price %> / night</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+</section>

@@ -1,0 +1,121 @@
+
+/* Heavenza - Always Dark Mode */
+:root{
+  --bg:#0b0f14;
+  --bg-elev:#10161d;
+  --card:#121a23;
+  --muted:#ffffff;
+  --text:#ffffff;
+
+  --accent:#6aa9ff;
+  --brand:#fe424d;
+  --border:#1e2a36;
+}
+.card-title, 
+.card-text, 
+p, 
+h5, 
+h6 {
+    color: #ffffff !important;
+}
+
+.card-text,
+.card-title,
+.card-body p,
+.card-body span,
+.card-body small {
+  color: #ffffff !important;
+}
+
+.card-body {
+  color: #ffffff !important;
+}
+
+
+html, body{
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.navbar, .dropdown-menu{
+  background: var(--bg-elev) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-link, .navbar-brand{
+  color: var(--text) !important;
+}
+
+.nav-link:hover, .navbar-brand:hover{
+  color: var(--accent) !important;
+}
+
+.btn, .btn-primary{
+  background: var(--brand) !important;
+  border-color: var(--brand) !important;
+  color: #fff !important;
+}
+
+.form-control, .form-select{
+  background: #0f141a !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+.form-control::placeholder{ color: #6b7b8c !important; }
+
+.card{
+  background: var(--card) !important;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card a{ color: var(--text); text-decoration: none; }
+.card a:hover{ color: var(--accent); }
+
+.card-img-top{
+  height: 220px;
+  object-fit: cover;
+}
+
+.badge{
+  background: #1b2836 !important;
+  color: var(--accent) !important;
+}
+
+.footer{
+  background: var(--bg-elev);
+  color: #ffffff !important;
+  border-top: 1px solid var(--border);
+}
+
+.search-input{
+  background:#0f141a;
+  border:1px solid var(--border);
+  color:var(--text);
+  border-radius: 999px;
+  padding: .6rem 1rem;
+}
+
+.search-btn{
+  border-radius: 999px;
+  padding:.55rem 1rem;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.filter i{ color: #ffffff }
+.filter p{ color: #ffffff }
+
+/* Override Bootstrap light backgrounds */
+.bg-light{ background: var(--bg-elev) !important; }
+.text-muted{ color: #ffffff !important; }
+
+
+
